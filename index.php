@@ -24,9 +24,9 @@
 <h1>Библиотека</h1>
 
 <form method="GET">
-    <input type="text" name="isbn" placeholder="ISBN" value="<?php echo $_GET['isbn'] ?>" />
-    <input type="text" name="name" placeholder="Название книги" value="<?php echo $_GET['name'] ?>" />
-    <input type="text" name="author" placeholder="Автор книги" value="<?php echo $_GET['author'] ?>" />
+    <input type="text" name="isbn" placeholder="ISBN" value="<?php echo (!empty($_GET['isbn']))? $_GET['isbn']: '' ?>" />
+    <input type="text" name="name" placeholder="Название книги" value="<?php echo (!empty($_GET['name']))? $_GET['name']: '' ?>" />
+    <input type="text" name="author" placeholder="Автор книги" value="<?php echo (!empty($_GET['author']))? $_GET['author']: '' ?>" />
     <input type="submit" value="Поиск" />
 </form>
 <p></p>
