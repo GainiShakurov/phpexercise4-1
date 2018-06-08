@@ -36,9 +36,9 @@
 require "config.php";
 
 
-$isbn = (!empty($_GET['isbn'])) ? " isbn LIKE '%".$_GET['isbn']."%' " : '';
-$name = (!empty($_GET['name'])) ? " AND name LIKE '%".$_GET['name']."%' " : '';
-$author = (!empty($_GET['author'])) ? " AND author LIKE '%".$_GET['author']."%' " : '';
+$isbn = (!empty($_GET['isbn'])) ? " isbn LIKE '%".strip_tags($_GET['isbn'])."%' " : '';
+$name = (!empty($_GET['name'])) ? " AND name LIKE '%".strip_tags($_GET['name'])."%' " : '';
+$author = (!empty($_GET['author'])) ? " AND author LIKE '%".strip_tags($_GET['author'])."%' " : '';
 
 $sql = "SELECT * FROM books ";
 
